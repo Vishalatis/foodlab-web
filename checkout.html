@@ -242,324 +242,207 @@
     </header>
 
     <div class="page-wrapper">
-      <section class="order-section ptb-120">
+      <section class="checkout-section ptb-60">
         <div class="container">
           <div class="row justify-content-center mb-30-none">
-            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-xs-6 mb-30">
-              <div class="order-item">
-                <a href="restaurant-details.html">
-                  <div class="order-thumb">
-                    <img
-                      src="assets/images/restaurant/profile/668e8274d35d51720615540.png"
-                      alt="'restaurant"
-                    />
-                    <span class="delivery-time"
-                      >50 <span class="label">min</span></span
-                    >
+            <div class="col-xl-7 col-lg-7 col-md-8 mb-30">
+              <form action="" method="POST">
+                <input
+                  type="hidden"
+                  name="_token"
+                  value=""
+                  autocomplete="off"
+                />
+                <div class="checkout-details-area">
+                  <div class="checkout-details-header">
+                    <h2 class="title">Order Details</h2>
                   </div>
-                  <div class="order-content">
+                  <div class="checkout-details-widget mb-20">
+                    <h5 class="checkout-widget-title">Delivery Time :</h5>
+                    <div class="checkout-widget-content">
+                      <span class="delivery-date">Thu, Nov 24 (ASAP)</span>
+                    </div>
+                  </div>
+                  <div class="checkout-details-widget mb-20">
                     <div
-                      class="order-content-header d-flex align-items-center justify-content-between flex-wrap"
+                      class="checkout-widget-header d-flex justify-content-between flex-wrap"
                     >
-                      <h4 class="title">Charles York</h4>
-                      <div class="ratings d-flex align-items-center flex-wrap">
-                        <i class="fa-solid fa-star"></i>
-                        <span>0.0/5</span>
+                      <h5 class="checkout-widget-title">Personal Details :</h5>
+                    </div>
+                    <div class="checkout-widget-content">
+                      <div class="personal-details mt-10">
+                        <h5 class="name">Name : Suraj J</h5>
+                        <span class="email"
+                          >Email : [Email is Protected for the demo]</span
+                        >
+                        <p class="number">
+                          Contact No : [Mobile is protected for the demo]
+                        </p>
                       </div>
                     </div>
-                    <span class="sub-title"> Sandwich, Burg </span>
-                    <div
-                      class="location-info d-flex justify-content-between flex-wrap justify-items-center"
-                    >
-                      <h6 class="delivery">
-                        $4.00 USD
-                        <span>Delivery Fee</span>
-                      </h6>
-                      <h6 class="delivery">
-                        <i class="las la-map-market"></i>
-                        <span>New Orleans, Louisiana</span>
-                      </h6>
+                  </div>
+                  <div class="checkout-details-widget mb-20">
+                    <h5 class="checkout-widget-title">Delivery Adress :</h5>
+                    <div class="form-group">
+                      <label>Adress*</label>
+                      <textarea
+                        class="form--control"
+                        name="delivery_address"
+                        placeholder="Enter your address"
+                        required
+                      >
+pune</textarea
+                      >
+                    </div>
+                    <div class="form-group">
+                      <label>Message</label>
+                      <textarea
+                        class="form--control"
+                        name="message"
+                        placeholder="Message for the restaurant if you have something to say"
+                      ></textarea>
                     </div>
                   </div>
-                </a>
-              </div>
+
+                  <div class="checkout-details-widget mb-20">
+                    <h5 class="checkout-widget-title mb-4">Payments :</h5>
+                    <input name="currency" type="hidden" />
+                    <input name="method_code" type="hidden" />
+
+                    <div class="form-group">
+                      <select
+                        class="form--control select2"
+                        data-minimum-results-for-search="-1"
+                        id="payment-methods"
+                        name="payment_method"
+                        required
+                      >
+                        <option value="" data-gateway="" selected>
+                          Select One
+                        </option>
+                        <option value="0" data-gateway="" disabled>
+                          Own Balance ($0.00 USD)
+                        </option>
+
+                        <option value="302">2Checkout - USD</option>
+                        <option value="327">Aamarpay - BDT</option>
+                        <option value="202">Bank Transfer</option>
+                        <option value="272">Cashmaal - PKR</option>
+                        <option value="314">Coinbase Commerce - USD</option>
+                        <option value="309">CoinPayments - BTC</option>
+                        <option value="281">CoinPayments Fiat - AUD</option>
+                        <option value="280">CoinPayments Fiat - USD</option>
+                        <option value="282">Flutterwave - USD</option>
+                        <option value="315">Instamojo - INR</option>
+                        <option value="285">Mollie - USD</option>
+                        <option value="286">NMI - USD</option>
+                        <option value="316">Now payments hosted - BTC</option>
+                        <option value="288">Payeer - USD</option>
+                        <option value="289">Paypal - USD</option>
+                        <option value="290">Paypal Express - USD</option>
+                        <option value="318">PayStack - NGN</option>
+                        <option value="292">PayTM - AUD</option>
+                        <option value="293">PayTM - USD</option>
+                        <option value="294">Perfect Money - USD</option>
+                        <option value="295">RazorPay - INR</option>
+                        <option value="319">Skrill - AED</option>
+                        <option value="320">Skrill - USD</option>
+                        <option value="301">Stripe Checkout - USD</option>
+                        <option value="299">Stripe Hosted - USD</option>
+                        <option value="300">Stripe Storefront - USD</option>
+                      </select>
+
+                      <div class="payment-charge d-none">
+                        <p class="limit">
+                          <i class="fa-solid fa-circle-exclamation"></i>
+                          <b>Limit : </b>
+                          <span class="min"></span>
+                          <span> - </span>
+                          <span class="max"></span>
+                        </p>
+                        <p class="charge">
+                          <i class="fa-solid fa-circle-exclamation"></i>
+                          <b>Charge : </b>
+                          <span></span>
+                        </p>
+                      </div>
+                    </div>
+
+                    <button class="btn btn--base w-100" type="submit">
+                      Place Your Order
+                    </button>
+                  </div>
+                </div>
+              </form>
             </div>
-            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-xs-6 mb-30">
-              <div class="order-item">
-                <a href="restaurant-details.html">
-                  <div class="order-thumb">
-                    <img
-                      src="assets/images/restaurant/profile/668e79971db961720613271.png"
-                      alt="'restaurant"
-                    />
-                    <span class="delivery-time"
-                      >30 <span class="label">min</span></span
-                    >
-                    <span class="offer-badge">codeone</span>
-                  </div>
-                  <div class="order-content">
-                    <div
-                      class="order-content-header d-flex align-items-center justify-content-between flex-wrap"
-                    >
-                      <h4 class="title">Garrett Henry</h4>
-                      <div class="ratings d-flex align-items-center flex-wrap">
-                        <i class="fa-solid fa-star"></i>
-                        <span>0.0/5</span>
-                      </div>
-                    </div>
-                    <span class="sub-title">
-                      Rice, Burger, Pizza, Pasta, Sandwich, B
-                    </span>
-                    <div
-                      class="location-info d-flex justify-content-between flex-wrap justify-items-center"
-                    >
-                      <h6 class="delivery">
-                        $2.00 USD
-                        <span>Delivery Fee</span>
-                      </h6>
-                      <h6 class="delivery">
-                        <i class="las la-map-market"></i>
-                        <span>Las Vegas, Nevada</span>
-                      </h6>
+
+            <div class="col-xl-3 col-lg-3 col-md-4 mb-30">
+              <div class="checkout-sidebar">
+                <div class="cart-header mb-20">
+                  <h4 class="title mb-0 text-center">
+                    Your Orders From Philip Reynolds
+                  </h4>
+                </div>
+                <div class="card-content">
+                  <div class="food-item">
+                    <div class="food-wrapper">
+                      <ul class="food-order-list">
+                        <li class="cart-item">
+                          1 x Aandaaz<span> $170.00 USD</span>
+                        </li>
+
+                        <li>Subtotal <span> $170.00 USD</span></li>
+                        <li>Delivery Fee <span> $5.00 USD</span></li>
+                        <li>Vat <span> $8.50 USD</span></li>
+                        <li>
+                          Discount <span class="discount"> $0.00 USD </span>
+                        </li>
+                        <li>
+                          <span class="fw-bold">Total(Incl.vat)</span>
+                          <span class="fw-bold grand-total"> $183.50 USD</span>
+                        </li>
+                      </ul>
                     </div>
                   </div>
-                </a>
-              </div>
-            </div>
-            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-xs-6 mb-30">
-              <div class="order-item">
-                <a href="restaurant-details.html">
-                  <div class="order-thumb">
-                    <img
-                      src="assets/images/restaurant/profile/668e78f4565eb1720613108.png"
-                      alt="'restaurant"
-                    />
-                    <span class="delivery-time"
-                      >40 <span class="label">min</span></span
-                    >
-                  </div>
-                  <div class="order-content">
-                    <div
-                      class="order-content-header d-flex align-items-center justify-content-between flex-wrap"
-                    >
-                      <h4 class="title">Stewart Parrish</h4>
-                      <div class="ratings d-flex align-items-center flex-wrap">
-                        <i class="fa-solid fa-star"></i>
-                        <span>0.0/5</span>
-                      </div>
-                    </div>
-                    <span class="sub-title"> Noodles, Steak, So </span>
-                    <div
-                      class="location-info d-flex justify-content-between flex-wrap justify-items-center"
-                    >
-                      <h6 class="delivery">Free <span>Delivery Fee</span></h6>
-                      <h6 class="delivery">
-                        <i class="las la-map-market"></i>
-                        <span>San Diego, California</span>
-                      </h6>
-                    </div>
-                  </div>
-                </a>
-              </div>
-            </div>
-            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-xs-6 mb-30">
-              <div class="order-item">
-                <a href="restaurant-details.html">
-                  <div class="order-thumb">
-                    <img
-                      src="assets/images/restaurant/profile/668e844ce52a01720616012.jpg"
-                      alt="'restaurant"
-                    />
-                    <span class="delivery-time"
-                      >60 <span class="label">min</span></span
-                    >
-                  </div>
-                  <div class="order-content">
-                    <div
-                      class="order-content-header d-flex align-items-center justify-content-between flex-wrap"
-                    >
-                      <h4 class="title">Philip Reynolds</h4>
-                      <div class="ratings d-flex align-items-center flex-wrap">
-                        <i class="fa-solid fa-star"></i>
-                        <span>0.0/5</span>
-                      </div>
-                    </div>
-                    <span class="sub-title">
-                      BBQ, Sandwich, Pizza, Pizzabu
-                    </span>
-                    <div
-                      class="location-info d-flex justify-content-between flex-wrap justify-items-center"
-                    >
-                      <h6 class="delivery">
-                        $5.00 USD
-                        <span>Delivery Fee</span>
-                      </h6>
-                      <h6 class="delivery">
-                        <i class="las la-map-market"></i>
-                        <span>Miami, Florida</span>
-                      </h6>
-                    </div>
-                  </div>
-                </a>
-              </div>
-            </div>
-            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-xs-6 mb-30">
-              <div class="order-item">
-                <a href="restaurant-details.html">
-                  <div class="order-thumb">
-                    <img
-                      src="assets/images/restaurant/profile/668e78c80c08b1720613064.png"
-                      alt="'restaurant"
-                    />
-                    <span class="delivery-time"
-                      >30 <span class="label">min</span></span
-                    >
-                  </div>
-                  <div class="order-content">
-                    <div
-                      class="order-content-header d-flex align-items-center justify-content-between flex-wrap"
-                    >
-                      <h4 class="title">Ciara Mullins</h4>
-                      <div class="ratings d-flex align-items-center flex-wrap">
-                        <i class="fa-solid fa-star"></i>
-                        <span>0.0/5</span>
-                      </div>
-                    </div>
-                    <span class="sub-title">
-                      Rice, Burger, Pizza, Pasta, Sandwich, B
-                    </span>
-                    <div
-                      class="location-info d-flex justify-content-between flex-wrap justify-items-center"
-                    >
-                      <h6 class="delivery">
-                        $2.00 USD
-                        <span>Delivery Fee</span>
-                      </h6>
-                      <h6 class="delivery">
-                        <i class="las la-map-market"></i>
-                        <span>Philadelphia, Pennsylvania</span>
-                      </h6>
-                    </div>
-                  </div>
-                </a>
-              </div>
-            </div>
-            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-xs-6 mb-30">
-              <div class="order-item">
-                <a href="restaurant-details.html">
-                  <div class="order-thumb">
-                    <img
-                      src="assets/images/restaurant/profile/668e793939ca31720613177.png"
-                      alt="'restaurant"
-                    />
-                    <span class="delivery-time"
-                      >30 <span class="label">min</span></span
-                    >
-                  </div>
-                  <div class="order-content">
-                    <div
-                      class="order-content-header d-flex align-items-center justify-content-between flex-wrap"
-                    >
-                      <h4 class="title">Ulysses Stanton</h4>
-                      <div class="ratings d-flex align-items-center flex-wrap">
-                        <i class="fa-solid fa-star"></i>
-                        <span>0.0/5</span>
-                      </div>
-                    </div>
-                    <span class="sub-title">
-                      Rice, Burger, Pizza, Pasta, Sandwich, B
-                    </span>
-                    <div
-                      class="location-info d-flex justify-content-between flex-wrap justify-items-center"
-                    >
-                      <h6 class="delivery">Free <span>Delivery Fee</span></h6>
-                      <h6 class="delivery">
-                        <i class="las la-map-market"></i>
-                        <span>Seattle, Washington</span>
-                      </h6>
-                    </div>
-                  </div>
-                </a>
-              </div>
-            </div>
-            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-xs-6 mb-30">
-              <div class="order-item">
-                <a href="restaurant-details.html">
-                  <div class="order-thumb">
-                    <img
-                      src="assets/images/restaurant/profile/668e7966a4aa61720613222.png"
-                      alt="'restaurant"
-                    />
-                    <span class="delivery-time"
-                      >50 <span class="label">min</span></span
-                    >
-                  </div>
-                  <div class="order-content">
-                    <div
-                      class="order-content-header d-flex align-items-center justify-content-between flex-wrap"
-                    >
-                      <h4 class="title">Winifred Waters</h4>
-                      <div class="ratings d-flex align-items-center flex-wrap">
-                        <i class="fa-solid fa-star"></i>
-                        <span>0.0/5</span>
-                      </div>
-                    </div>
-                    <span class="sub-title"> BBQ, Noodles, Steak, So </span>
-                    <div
-                      class="location-info d-flex justify-content-between flex-wrap justify-items-center"
-                    >
-                      <h6 class="delivery">Free <span>Delivery Fee</span></h6>
-                      <h6 class="delivery">
-                        <i class="las la-map-market"></i>
-                        <span>Philadelphia, Pennsylvania</span>
-                      </h6>
-                    </div>
-                  </div>
-                </a>
-              </div>
-            </div>
-            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-xs-6 mb-30">
-              <div class="order-item">
-                <a href="restaurant-details.html">
-                  <div class="order-thumb">
-                    <img
-                      src="assets/images/restaurant/profile/668e791930b681720613145.png"
-                      alt="'restaurant"
-                    />
-                    <span class="delivery-time"
-                      >45 <span class="label">min</span></span
-                    >
-                  </div>
-                  <div class="order-content">
-                    <div
-                      class="order-content-header d-flex align-items-center justify-content-between flex-wrap"
-                    >
-                      <h4 class="title">Keelie Knapp</h4>
-                      <div class="ratings d-flex align-items-center flex-wrap">
-                        <i class="fa-solid fa-star"></i>
-                        <span>0.0/5</span>
-                      </div>
-                    </div>
-                    <span class="sub-title"> BBQ, Sandwich, Pasta, Piz </span>
-                    <div
-                      class="location-info d-flex justify-content-between flex-wrap justify-items-center"
-                    >
-                      <h6 class="delivery">
-                        $4.00 USD
-                        <span>Delivery Fee</span>
-                      </h6>
-                      <h6 class="delivery">
-                        <i class="las la-map-market"></i>
-                        <span>Boston, Massachusetts</span>
-                      </h6>
-                    </div>
-                  </div>
-                </a>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </section>
+
+      <div class="modal fade" id="voucherModal" role="dialog" tabindex="-1">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Voucher Details</h5>
+              <button
+                class="close"
+                data-bs-dismiss="modal"
+                type="button"
+                aria-label="Close"
+              >
+                <i class="las la-times"></i>
+              </button>
+            </div>
+            <div class="modal-body">
+              <div class="form-group">
+                <input
+                  class="form--control"
+                  name="v_code"
+                  type="text"
+                  placeholder="Enter voucher code"
+                />
+              </div>
+            </div>
+            <div class="modal-footer">
+              <a class="btn--base voucher-code-apply" href="javascript:void(0)"
+                >Apply</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 
     <section class="footer-area">

@@ -2717,7 +2717,7 @@ option {
 
 .breadcrumb-item.active::before {
   content: "\f101";
-  font-family: "Line Awesome Free";
+  font-family: "font awesome 5 free";
   font-weight: 600;
   color: #ff5722;
   font-size: 14px;
