@@ -655,7 +655,7 @@ label.required:after {
 .custom--dropdown > .custom--dropdown__selected::before {
   font-family: "Font Awesome 5 Free";
   font-weight: 700;
-  content: "\f0d7";
+  content: "";
   display: inline-block;
   position: absolute;
   margin-left: auto;
