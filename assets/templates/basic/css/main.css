@@ -2089,7 +2089,7 @@ option {
 
 @media only screen and (max-width: 1300px) {
   .header-bottom-area {
-    padding: 10px 40px;
+    padding: 0px 40px;
   }
 }
 
@@ -2103,7 +2103,7 @@ option {
   .header-bottom-area {
     background-color: white;
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.08);
-    padding: 10px 0;
+    padding: 0px 0;
   }
 }
 
@@ -2200,6 +2200,10 @@ option {
   color: black;
   transition: all 0.9s;
   z-index: 9;
+}
+
+.header-bottom-area .navbar-collapse .main-menu li a .active {
+  color: #ff5722;
 }
 
 @media only screen and (max-width: 1400px) {
@@ -2324,12 +2328,12 @@ option {
 }
 
 .site-logo {
-  max-width: 60px;
+  max-width: 100px;
 }
 
 @media only screen and (max-width: 575px) {
   .site-logo {
-    max-width: 60px;
+    max-width: 100px;
   }
 }
 
@@ -4732,7 +4736,7 @@ option {
 }
 
 .footer-widget .footer-logo img {
-  max-width: 80px;
+  max-width: 110px;
 }
 
 .copy-text a {
