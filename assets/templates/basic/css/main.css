@@ -2324,12 +2324,12 @@ option {
 }
 
 .site-logo {
-  max-width: 170px;
+  max-width: 60px;
 }
 
 @media only screen and (max-width: 575px) {
   .site-logo {
-    max-width: 120px;
+    max-width: 60px;
   }
 }
 
@@ -4732,7 +4732,7 @@ option {
 }
 
 .footer-widget .footer-logo img {
-  max-width: 200px;
+  max-width: 80px;
 }
 
 .copy-text a {
